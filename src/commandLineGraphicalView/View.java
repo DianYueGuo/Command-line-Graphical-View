@@ -1,4 +1,4 @@
-package src.commandLineGraphicalView;
+package commandLineGraphicalView;
 
 public class View {
 
@@ -26,6 +26,13 @@ public class View {
     }
 
 
+    public void set(int x, int y, int value) throws IllegalArgumentException {
+        if(value < 0 || value > 255) throw new IllegalArgumentException("value should between 0 and 255");
+
+        bitmap[x][y].set(value);
+    }
+
+
     public void show() {
         for(int i = 0; i < width; i++) {
             for(int j = 0; j < height; j++) {
@@ -34,5 +41,5 @@ public class View {
             System.out.println();
         }
     }
-    
+
 }

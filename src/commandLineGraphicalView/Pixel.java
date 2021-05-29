@@ -1,4 +1,4 @@
-package src.commandLineGraphicalView;
+package commandLineGraphicalView;
 
 class Pixel {
     
@@ -13,6 +13,12 @@ class Pixel {
         if(value < 0 || value > 255) throw new IllegalArgumentException("value should between 0 and 255");
 
         chars = " .'`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
+
+        this.value = value;
+    }
+
+    void set(int value) throws IllegalArgumentException {
+        if(value < 0 || value > 255) throw new IllegalArgumentException("value should between 0 and 255");
 
         this.value = value;
     }
